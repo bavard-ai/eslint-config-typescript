@@ -1,6 +1,15 @@
 version: 2.1
+workflows:
+  version: 2.1
+  publish-to-npm:
+    jobs:
+      - publish:
+          context: bavard
+          filters:
+            branches:
+              only: main
 jobs:
-  build:
+  publish:
     docker:
       - image: "circleci/node:latest"
     steps:
@@ -12,4 +21,4 @@ jobs:
           name: publish
           command: |
             echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
-            npm publish --access public
+            npm publish
