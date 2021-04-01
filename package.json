@@ -2,7 +2,6 @@
   "name": "eslint-config-typescript",
   "version": "1.0.0",
   "description": "Bavard's base TS ESLint config, following our styleguide",
-  "main": "index.js",
   "scripts": {
     "prelint": "eclint check * rules/* test/*",
     "lint": "eslint --report-unused-disable-directives .",
