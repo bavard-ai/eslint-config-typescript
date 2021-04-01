@@ -1,96 +1,15 @@
 version: 2.1
-orbs:
-  cypress: cypress-io/cypress@1
-  node: circleci/node@1.1
-executors:
-  base-10-large:
-    docker:
-      - image: 'cypress/base:10'
-    resource_class: large
-    environment:
-      NODE_OPTIONS: --max_old_space_size=4096
-
-references:
-  default_config: &default_config
-    docker:
-      - image: gcr.io/bavard-infra/devops:1.0.0
-        auth:
-          username: _json_key # default username when using a JSON key file to authenticate
-          password: $GOOGLE_CREDENTIALS # JSON service account you created
-
-  test: &test
-    <<: *default_config
-    steps:
-      - checkout
-      - run:
-          name: test
-          command: |
-            set -eo pipefail
-            npm install
-            npm run lint
-
-  deploy-dev: &deploy-dev
-    <<: *default_config
-    resource_class: large
-    steps:
-      - checkout
-      - run:
-          name: deploy
-          command: |
-            echo $GOOGLE_CREDENTIALS | gcloud auth activate-service-account --key-file=-
-            gcloud config set project bavard-dev
-            gcloud config set compute/zone us-west3-a
-            ./scripts/deploy-dev.sh
-
-  deploy-prod: &deploy-prod
-    <<: *default_config
-    resource_class: large
-    steps:
-      - checkout
-      - run:
-          name: deploy
-          command: |
-            echo $GOOGLE_CREDENTIALS | gcloud auth activate-service-account --key-file=-
-            gcloud config set project bavard-prod
-            gcloud config set compute/zone us-west3-a
-            ./scripts/deploy-prod.sh
 jobs:
-  test:
-    <<: *test
-  deploy-dev:
-    <<: *deploy-dev
-  deploy-prod:
-    <<: *deploy-prod
-workflows:
-  version: 2
-  deploy:
-    jobs:
-      - cypress/run:
-          timeout: 15m
-          executor: base-10-large
-          context: bavard
-          install-command: |
-            set -eo pipefail
-            echo $FIREBASE_SERVICE_ACCOUNT > ./serviceAccount.json 
-            npm install
-            npm run lint
-          start: npm run ci:start:test
-          wait-on: 'http://localhost:3000'
-      - deploy-dev:
-          context: bavard
-          requires:
-            - cypress/run
-          filters:
-            branches:
-              only: master
-      - hold:
-          type: approval
-          requires:
-            - deploy-dev
-      - deploy-prod:
-          context: bavard
-          filters:
-            branches:
-              only: master
-          requires:
-            - hold
+  build:
+    docker:
+      - image: "circleci/node:latest"
+    steps:
+      - checkout
+      - run:
+          name: install
+          command: npm install
+      - run:
+          name: publish
+          command: |
+            echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+            npm publish --access public
