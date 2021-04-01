@@ -1,0 +1,3 @@
+# These owners will be the default owners for everything in the repo.
+# The following will be requested for review when someone opens a pull request.
+*       @david-wb @jstiehl @jconway325 @benbrewerbowman @epeters3
