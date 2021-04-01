@@ -31,7 +31,7 @@ If your app is a `React.js` app:
 module.exports = {
   root: true,
   extends: [
-    "bBavard/eslint-config-typescript/react",
+    "bavard/eslint-config-typescript/react",
   ],
 };
 ```
