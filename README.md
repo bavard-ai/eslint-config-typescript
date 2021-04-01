@@ -17,6 +17,7 @@ Create a `.eslintrc.js` ESLint config file at the root of your repo.
 Paste the following code in the file:
 
 If your app is a `Node.js` app:
+
 ```
 module.exports = {
   root: true,
@@ -27,11 +28,12 @@ module.exports = {
 ```
 
 If your app is a `React.js` app:
+
 ```
 module.exports = {
   root: true,
   extends: [
-    "bBavard/eslint-config-typescript/react",
+    "@bavard/eslint-config-typescript/react",
   ],
 };
 ```
