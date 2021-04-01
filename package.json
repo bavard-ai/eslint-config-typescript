@@ -1,6 +1,6 @@
 {
   "name": "@bavard/eslint-config-typescript",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Bavard's base TS ESLint config, following our styleguide",
   "scripts": {
     "prelint": "eclint check * rules/* test/*",
