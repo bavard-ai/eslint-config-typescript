@@ -7,7 +7,7 @@ Bavard's ESLint config with TypeScript support
 ### 1) Install
 
 ```
-npm install @Bavard/eslint-config-typescript --save-dev
+npm install @bavard/eslint-config-typescript --save-dev
 ```
 
 ### 2) Install devDependencies
