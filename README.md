@@ -25,8 +25,6 @@ npm install @typescript-eslint/eslint-plugin \
             eslint-plugin-jest \
             eslint-plugin-prettier \
             prettier \
-            prettier-eslint \
-            prettier-eslint-cli
             --save-dev
 ```
 
@@ -35,11 +33,8 @@ If your app is a `React.js` app:
 ```
 npm install @typescript-eslint/eslint-plugin \
             @typescript-eslint/parser \
-            eslint-config-airbnb \
             eslint-config-airbnb-typescript \
             eslint-config-prettier \
-            eslint-import-resolver-typescript \
-            eslint-loader \
             eslint-plugin-import \
             eslint-plugin-jest \
             eslint-plugin-jsx-a11y \
@@ -47,8 +42,6 @@ npm install @typescript-eslint/eslint-plugin \
             eslint-plugin-react \
             eslint-plugin-react-hooks \
             prettier \
-            prettier-eslint \
-            prettier-eslint-cli
             --save-dev
 ```
 
