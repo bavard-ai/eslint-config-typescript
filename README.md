@@ -10,6 +10,48 @@ Bavard's ESLint config with TypeScript support
 npm install @Bavard/eslint-config-typescript --save-dev
 ```
 
+### 2) Install devDependencies
+
+If your app is a `Node.js` app:
+
+Install the following devDependencies:
+
+```
+npm install @typescript-eslint/eslint-plugin \
+            @typescript-eslint/parser \
+            eslint-config-airbnb-typescript \
+            eslint-config-prettier \
+            eslint-plugin-import \
+            eslint-plugin-jest \
+            eslint-plugin-prettier \
+            prettier \
+            prettier-eslint \
+            prettier-eslint-cli
+            --save-dev
+```
+
+If your app is a `React.js` app:
+
+```
+npm install @typescript-eslint/eslint-plugin \
+            @typescript-eslint/parser \
+            eslint-config-airbnb \
+            eslint-config-airbnb-typescript \
+            eslint-config-prettier \
+            eslint-import-resolver-typescript \
+            eslint-loader \
+            eslint-plugin-import \
+            eslint-plugin-jest \
+            eslint-plugin-jsx-a11y \
+            eslint-plugin-prettier \
+            eslint-plugin-react \
+            eslint-plugin-react-hooks \
+            prettier \
+            prettier-eslint \
+            prettier-eslint-cli
+            --save-dev
+```
+
 ### 2) Configure ESLint
 
 Create a `.eslintrc.js` ESLint config file at the root of your repo.
