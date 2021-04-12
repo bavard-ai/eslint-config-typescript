@@ -14,11 +14,6 @@ module.exports = {
       globalReturn: false,
       impliedStrict: false,
       jsx: false
-    },
-    parser: "@typescript-eslint/parser"
-  },
-  rules: {
-    "vue/html-closing-bracket-newline": "off",
-    "vue/html-closing-bracket-spacing": "off",
-  },
+    }
+  }
 };

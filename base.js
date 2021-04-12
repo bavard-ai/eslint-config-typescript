@@ -33,6 +33,7 @@ module.exports = {
     "@typescript-eslint/ban-ts-comment": "off",
     "no-nested-ternary": "off",
     "no-console": "error",
+    "no-debugger": "warn",
     radix: "off",
     "no-implicit-coercion": [
       2,
