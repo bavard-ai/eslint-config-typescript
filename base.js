@@ -32,7 +32,7 @@ module.exports = {
     "@typescript-eslint/naming-convention": "off",
     "@typescript-eslint/ban-ts-comment": "off",
     "no-nested-ternary": "off",
-    "no-console": "error",
+    "no-console": "warn",
     "no-debugger": "warn",
     radix: "off",
     "no-implicit-coercion": [
