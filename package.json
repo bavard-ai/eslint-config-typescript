@@ -1,6 +1,6 @@
 {
   "name": "@bavard/eslint-config-typescript",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Bavard's base TS ESLint config, following our styleguide",
   "scripts": {
     "prelint": "eclint check * rules/* test/*",
@@ -65,9 +65,10 @@
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-react": "7.23.1",
     "eslint-plugin-react-hooks": "4.2.0",
+    "eslint-plugin-vue": "^7.9.0",
     "object.assign": "^4.1.2",
     "object.entries": "^1.1.2",
-    "prettier": ">=2.0.0"
+    "vue-eslint-parser": "^7.6.0"
   },
   "files": [
     "LICENSE",
