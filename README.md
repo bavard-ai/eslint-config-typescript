@@ -45,6 +45,21 @@ npm install @typescript-eslint/eslint-plugin \
             --save-dev
 ```
 
+If your app is `Vue.js` app:
+
+```
+npm install @typescript-eslint/eslint-plugin \
+            @typescript-eslint/parser \
+            eslint-config-airbnb-typescript \
+            eslint-config-prettier \
+            eslint-plugin-import \
+            eslint-plugin-jest \
+            eslint-plugin-vue \
+            eslint-plugin-prettier \
+            prettier \
+            --save-dev
+```
+
 ### 2) Configure ESLint
 
 Create a `.eslintrc.js` ESLint config file at the root of your repo.
@@ -69,6 +84,17 @@ module.exports = {
   root: true,
   extends: [
     "@bavard/eslint-config-typescript/react",
+  ],
+};
+```
+
+If your app is a `Vue.js` app:
+
+```
+module.exports = {
+  root: true,
+  extends: [
+    "@bavard/eslint-config-typescript/vue",
   ],
 };
 ```
