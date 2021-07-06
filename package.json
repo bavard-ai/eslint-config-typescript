@@ -1,6 +1,6 @@
 {
   "name": "@bavard/eslint-config-typescript",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Bavard's base TS ESLint config, following our styleguide",
   "scripts": {
     "prelint": "eclint check * rules/* test/*",
@@ -36,7 +36,7 @@
   },
   "homepage": "https://github.com/bavard-ai/eslint-config-typescript",
   "devDependencies": {
-    "@babel/runtime": "^7.13.10",
+    "@babel/runtime": "^7.14.6",
     "babel-preset-airbnb": "^5.0.0",
     "eclint": "^2.8.1",
     "eslint": "^7.23.0",
@@ -46,29 +46,29 @@
     "typescript": "^4.2.3"
   },
   "peerDependencies": {
-    "eslint": ">=7.0.0",
-    "prettier": ">=2.0.0",
-    "typescript": ">=4.0.0"
+    "eslint": ">=7.30.0",
+    "prettier": ">=2.3.2",
+    "typescript": ">=4.3.5"
   },
   "engines": {
     "node": ">=10",
     "npm": ">=7.0.0"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.20.0",
-    "@typescript-eslint/parser": "^4.20.0",
+    "@typescript-eslint/eslint-plugin": "^4.28.2",
+    "@typescript-eslint/parser": "^4.28.2",
     "confusing-browser-globals": "^1.0.10",
     "eslint-config-airbnb-typescript": "^12.3.1",
-    "eslint-config-prettier": "^8.1.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jest": "^24.3.2",
-    "eslint-plugin-prettier": "^3.3.1",
-    "eslint-plugin-react": "7.23.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jest": "^24.3.6",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "7.24.0",
     "eslint-plugin-react-hooks": "4.2.0",
-    "eslint-plugin-vue": "^7.9.0",
+    "eslint-plugin-vue": "^7.13.0",
     "object.assign": "^4.1.2",
-    "object.entries": "^1.1.2",
-    "vue-eslint-parser": "^7.6.0"
+    "object.entries": "^1.1.4",
+    "vue-eslint-parser": "^7.8.0"
   },
   "files": [
     "LICENSE",

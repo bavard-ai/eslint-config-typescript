@@ -11,7 +11,7 @@ workflows:
 jobs:
   publish:
     docker:
-      - image: node:14.15-slim
+      - image: node:15-alpine
     steps:
       - checkout
       - run:
